@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace CalculatorConsole
 {
-    public class CalculatorLog
+    public static class CalculatorLog
     {
-        private List<string> logEntries = [];
+        private static List<string> logEntries = [];
 
-        // This class is a placeholder for a logger element that can be used in the Calculator application.
-        public CalculatorLog() { }
-
-        public void AddLogEntry(string entry)
+        public static void AddLogEntry(string entry)
         {
             logEntries.Add(entry);
         }
 
-        public void ShowHistory()
+        public static void ShowHistory()
         {
             if (logEntries.Count == 0)
             {
