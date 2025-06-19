@@ -4,7 +4,6 @@ while (true)
 {
     Console.WriteLine("Введите первое число: ");
 
-
     string? input1 = Console.ReadLine();
 
     if (input1 == null || !double.TryParse(input1, out double number1))
@@ -56,4 +55,12 @@ while (true)
             Console.WriteLine("Некорректная операция. Пожалуйста, выберите +, -, *, / или %.");
             break;
     }
+
+    Console.WriteLine("Хотите продолжить? (да/нет)");
+    string? continueInput = Console.ReadLine()?.ToLower();
+    if (continueInput != "да" && continueInput != "yes")
+    {
+        break;
+    }
+    Console.Clear();
 }
