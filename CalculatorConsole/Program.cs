@@ -93,7 +93,9 @@ while (true)
     string? continueInput = Console.ReadLine()?.ToLower();
     if (continueInput != "да" && continueInput != "yes")
     {
+        calculatorLog.ShowHistory();
         break;
     }
     Console.Clear();
+
 }
